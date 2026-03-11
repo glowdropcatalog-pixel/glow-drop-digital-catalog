@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow Drop Accessories | Glow Beyond Ordinary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header" id="top">
+        <div class="brand">
+          <div class="brand-mark">Glow Drop Accessories</div>
+          <div class="brand-tagline">Glow Beyond Ordinary</div>
+        </div>
+        <nav class="site-nav">
+          <a href="#home">Home</a>
+          <a href="#categories">Categories</a>
+          <a href="#new-arrivals">New Arrivals</a>
+          <a href="#promotions">Promotions</a>
+          <a href="#delivery">Delivery</a>
+          <a href="#contact">Contact</a>
+          <a href="#admin">Admin</a>
+        </nav>
+        <div class="header-actions">
+          <div class="search-bar">
+            <input id="searchInput" type="search" placeholder="Search products, categories, or keywords" />
+            <button id="searchButton" type="button">Search</button>
+          </div>
+          <button class="cart-button" id="cartToggle" type="button">Cart <span id="cartCount">0</span></button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <div class="hero-content">
+            <p class="hero-label">Glow Drop Accessories</p>
+            <h1>Glow With Style – Discover Our Latest Accessories</h1>
+            <p>
+              Elegant, affordable, and fashion-forward pieces curated to highlight your glow every day. Explore
+              accessories, beauty essentials, and footwear designed for confidence.
+            </p>
+            <div class="hero-actions">
+              <a class="primary" href="#new-arrivals">Shop New Arrivals</a>
+              <a class="secondary" href="#categories">Explore Categories</a>
+            </div>
+            <div class="hero-metrics">
+              <div>
+                <span>7</span>
+                Categories
+              </div>
+              <div>
+                <span>120+</span>
+                Products
+              </div>
+              <div>
+                <span>1-2 days</span>
+                Kaduna Delivery
+              </div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-header">Featured Drop</div>
+            <div class="hero-card-body">
+              <h3>Radiant Glasses Set</h3>
+              <p>Anti-blue light fashion eyewear in warm amber tones.</p>
+              <button class="primary" type="button" data-action="featured">View Featured</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="categories">
+          <div class="section-header">
+            <h2>Shop by Category</h2>
+            <p>Curated collections designed for beauty, glow, and everyday style.</p>
+          </div>
+          <div class="category-grid" id="categoryGrid"></div>
+        </section>
+
+        <section class="section" id="featured">
+          <div class="section-header">
+            <h2>Featured Products</h2>
+            <p>Signature picks loved by the Glow Drop community.</p>
+          </div>
+          <div class="product-grid" id="featuredGrid"></div>
+        </section>
+
+        <section class="section" id="best-sellers">
+          <div class="section-header">
+            <h2>Best Sellers</h2>
+            <p>Our most popular accessories and beauty must-haves.</p>
+          </div>
+          <div class="product-grid" id="bestSellerGrid"></div>
+        </section>
+
+        <section class="section" id="new-arrivals">
+          <div class="section-header">
+            <h2>New Arrivals</h2>
+            <p>Freshly dropped accessories and skincare essentials.</p>
+          </div>
+          <div class="product-grid" id="newArrivalGrid"></div>
+        </section>
+
+        <section class="section" id="trending">
+          <div class="section-header">
+            <h2>Trending Products</h2>
+            <p>What everyone is loving right now.</p>
+          </div>
+          <div class="product-grid" id="trendingGrid"></div>
+        </section>
+
+        <section class="section" id="special-offers">
+          <div class="section-header">
+            <h2>Special Offers</h2>
+            <p>Limited-time glow deals and bundles.</p>
+          </div>
+          <div class="product-grid" id="offerGrid"></div>
+        </section>
+
+        <section class="section" id="promotions">
+          <div class="section-header">
+            <h2>Promotions & New Arrivals</h2>
+            <p>Seasonal highlights and glowing bundle deals.</p>
+          </div>
+          <div class="promo-grid">
+            <div class="promo-card">
+              <h3>Buy 2 Jewellery Items and Get 10% Off</h3>
+              <p>Mix and match necklaces, rings, and bracelets for a radiant discount.</p>
+              <button class="secondary" type="button" data-action="promo">Shop Jewellery</button>
+            </div>
+            <div class="promo-card">
+              <h3>Glow Essentials Set</h3>
+              <p>Bundle a lip gloss, beauty oil, and beaded bracelet for a luxe glow-up.</p>
+              <button class="secondary" type="button" data-action="promo">Explore Bundles</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="search">
+          <div class="section-header">
+            <h2>Search & Filter</h2>
+            <p>Find the perfect piece with focused filters.</p>
+          </div>
+          <div class="filter-bar">
+            <select id="filterCategory">
+              <option value="">All Categories</option>
+            </select>
+            <select id="filterSort">
+              <option value="">Sort</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="newest">Newest Products</option>
+              <option value="popular">Most Popular</option>
+            </select>
+            <select id="filterColor">
+              <option value="">Color</option>
+            </select>
+            <select id="filterSize">
+              <option value="">Size</option>
+            </select>
+            <div class="filter-range">
+              <label for="minPrice">Min ₦</label>
+              <input id="minPrice" type="number" placeholder="0" />
+            </div>
+            <div class="filter-range">
+              <label for="maxPrice">Max ₦</label>
+              <input id="maxPrice" type="number" placeholder="50000" />
+            </div>
+            <button class="secondary" id="applyFilters" type="button">Apply Filters</button>
+          </div>
+          <div class="product-grid" id="searchResults"></div>
+        </section>
+
+        <section class="section" id="product-detail">
+          <div class="section-header">
+            <h2>Product Details</h2>
+            <p>Explore every detail before you add to cart.</p>
+          </div>
+          <div class="product-detail" id="productDetail">
+            <div class="gallery">
+              <div class="main-image" id="detailMainImage"></div>
+              <div class="thumbnail-row" id="detailThumbnails"></div>
+            </div>
+            <div class="detail-info">
+              <h3 id="detailName">Select a product</h3>
+              <div class="detail-price" id="detailPrice">₦0</div>
+              <p id="detailDescription">Choose a product to see the description.</p>
+              <ul class="detail-list" id="detailMeta"></ul>
+              <div class="availability" id="detailAvailability">Availability: --</div>
+              <div class="quantity-selector">
+                <button id="quantityMinus" type="button">-</button>
+                <input id="quantityValue" type="number" min="1" value="1" />
+                <button id="quantityPlus" type="button">+</button>
+              </div>
+              <div class="detail-actions">
+                <button class="primary" id="addToCart" type="button">Add to Cart</button>
+                <button class="secondary" id="buyNow" type="button">Buy Now</button>
+              </div>
+              <div class="review-section">
+                <h4>Reviews & Ratings</h4>
+                <div id="reviewList"></div>
+                <form id="reviewForm">
+                  <input id="reviewName" type="text" placeholder="Your name" required />
+                  <select id="reviewRating" required>
+                    <option value="">Rating</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                  </select>
+                  <textarea id="reviewComment" placeholder="Write a review" required></textarea>
+                  <button class="secondary" type="submit">Submit Review</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="cart">
+          <div class="section-header">
+            <h2>Shopping Cart</h2>
+            <p>Review, edit, or save items for later.</p>
+          </div>
+          <div class="cart-panel">
+            <div id="cartItems"></div>
+            <div class="cart-summary">
+              <div>
+                <span>Subtotal</span>
+                <span id="cartSubtotal">₦0</span>
+              </div>
+              <div>
+                <span>Saved for Later</span>
+                <span id="cartSavedCount">0 items</span>
+              </div>
+              <button class="primary" type="button" id="checkoutToggle">Proceed to Checkout</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="checkout">
+          <div class="section-header">
+            <h2>Checkout</h2>
+            <p>Complete your order in a few steps.</p>
+          </div>
+          <form class="checkout-form" id="checkoutForm">
+            <div>
+              <label for="checkoutName">Full Name</label>
+              <input id="checkoutName" type="text" required />
+            </div>
+            <div>
+              <label for="checkoutPhone">Phone Number</label>
+              <input id="checkoutPhone" type="tel" required />
+            </div>
+            <div class="full">
+              <label for="checkoutAddress">Delivery Address</label>
+              <textarea id="checkoutAddress" required></textarea>
+            </div>
+            <div>
+              <label for="checkoutDelivery">Delivery Location</label>
+              <select id="checkoutDelivery" required>
+                <option value="">Select location</option>
+                <option value="Kaduna">Kaduna</option>
+                <option value="Outside Kaduna">Outside Kaduna</option>
+                <option value="International">International</option>
+              </select>
+            </div>
+            <div>
+              <label for="checkoutPayment">Payment Method</label>
+              <select id="checkoutPayment" required>
+                <option value="">Select payment</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+                <option value="Card Payment">Card Payment</option>
+                <option value="Mobile Payment">Mobile Payment</option>
+                <option value="Pay on Delivery">Pay on Delivery</option>
+              </select>
+            </div>
+            <div class="full checkout-summary">
+              <div>
+                <span>Delivery Fee</span>
+                <span id="checkoutDeliveryFee">₦0</span>
+              </div>
+              <div>
+                <span>Total</span>
+                <span id="checkoutTotal">₦0</span>
+              </div>
+            </div>
+            <button class="primary" type="submit">Place Order</button>
+            <div class="order-confirmation" id="orderConfirmation"></div>
+          </form>
+        </section>
+
+        <section class="section" id="delivery">
+          <div class="section-header">
+            <h2>Delivery & Shipping</h2>
+            <p>Fast delivery across Kaduna, Nigeria, and beyond.</p>
+          </div>
+          <div class="delivery-grid">
+            <div class="delivery-card">
+              <h3>Within Kaduna</h3>
+              <p>Delivery Fee: ₦1000 – ₦1500</p>
+              <p>Estimated Time: 1 – 2 days</p>
+            </div>
+            <div class="delivery-card">
+              <h3>Outside Kaduna</h3>
+              <p>Delivery Fee: ₦2500 – ₦5000</p>
+              <p>Estimated Time: 2 – 5 days</p>
+            </div>
+            <div class="delivery-card">
+              <h3>International</h3>
+              <p>Delivery cost depends on destination country.</p>
+              <p>Contact Glow Drop Accessories before placing international orders.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="account">
+          <div class="section-header">
+            <h2>Customer Account</h2>
+            <p>Create an account to track orders and save delivery information.</p>
+          </div>
+          <div class="account-grid">
+            <form class="account-card" id="registerForm">
+              <h3>Create Account</h3>
+              <input id="registerName" type="text" placeholder="Full name" required />
+              <input id="registerEmail" type="email" placeholder="Email" required />
+              <input id="registerPhone" type="tel" placeholder="Phone" required />
+              <input id="registerPassword" type="password" placeholder="Password" required />
+              <button class="primary" type="submit">Sign Up</button>
+              <div class="form-message" id="registerMessage"></div>
+            </form>
+            <form class="account-card" id="loginForm">
+              <h3>Log In</h3>
+              <input id="loginEmail" type="email" placeholder="Email" required />
+              <input id="loginPassword" type="password" placeholder="Password" required />
+              <button class="secondary" type="submit">Log In</button>
+              <div class="form-message" id="loginMessage"></div>
+            </form>
+          </div>
+          <div class="account-panel" id="accountPanel"></div>
+        </section>
+
+        <section class="section" id="contact">
+          <div class="section-header">
+            <h2>Contact Glow Drop Accessories</h2>
+            <p>Reach out for support, inquiries, or custom orders.</p>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3>Connect with Us</h3>
+              <p>Instagram: <a href="https://instagram.com/glow_dropaccessories" target="_blank">@glow_dropaccessories</a></p>
+              <p>Facebook: <a href="https://facebook.com" target="_blank">Glowdrop Accessories</a></p>
+              <p>Email: glowdropaccessories@gmail.com</p>
+              <button class="secondary" type="button" data-action="whatsapp">WhatsApp Order</button>
+            </div>
+            <form class="contact-card" id="contactForm">
+              <h3>Send a Message</h3>
+              <input id="contactName" type="text" placeholder="Your name" required />
+              <input id="contactEmail" type="email" placeholder="Email" required />
+              <textarea id="contactMessage" placeholder="Tell us how we can help" required></textarea>
+              <button class="primary" type="submit">Send Message</button>
+              <div class="form-message" id="contactMessageStatus"></div>
+            </form>
+          </div>
+        </section>
+
+        <section class="section" id="admin">
+          <div class="section-header">
+            <h2>Admin Management Panel</h2>
+            <p>Manage products, categories, and orders without developer support.</p>
+          </div>
+          <div class="admin-grid">
+            <form class="admin-card" id="adminLoginForm">
+              <h3>Admin Login</h3>
+              <input id="adminEmail" type="email" placeholder="Admin email" required />
+              <input id="adminPassword" type="password" placeholder="Password" required />
+              <button class="secondary" type="submit">Login</button>
+              <div class="form-message" id="adminLoginMessage"></div>
+            </form>
+            <form class="admin-card" id="productForm">
+              <h3>Add or Update Product</h3>
+              <input id="productId" type="text" placeholder="Product ID (for updates)" />
+              <input id="productName" type="text" placeholder="Product name" required />
+              <select id="productCategory" required></select>
+              <input id="productSubcategory" type="text" placeholder="Subcategory" />
+              <input id="productPrice" type="number" placeholder="Price" required />
+              <input id="productSku" type="text" placeholder="SKU" required />
+              <input id="productColor" type="text" placeholder="Color" />
+              <input id="productSize" type="text" placeholder="Size" />
+              <input id="productMaterial" type="text" placeholder="Material or Ingredients" />
+              <input id="productStock" type="number" placeholder="Stock quantity" required />
+              <textarea id="productDescription" placeholder="Product description" required></textarea>
+              <div class="admin-flags">
+                <label><input id="flagFeatured" type="checkbox" /> Featured</label>
+                <label><input id="flagBest" type="checkbox" /> Best Seller</label>
+                <label><input id="flagNew" type="checkbox" /> New Arrival</label>
+                <label><input id="flagTrending" type="checkbox" /> Trending</label>
+                <label><input id="flagOffer" type="checkbox" /> Special Offer</label>
+              </div>
+              <button class="primary" type="submit">Save Product</button>
+              <div class="form-message" id="productMessage"></div>
+            </form>
+          </div>
+          <div class="admin-panel" id="adminPanel">
+            <div class="admin-section">
+              <h3>Product Catalog</h3>
+              <div id="adminProducts"></div>
+            </div>
+            <div class="admin-section">
+              <h3>Orders</h3>
+              <div id="adminOrders"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          <h3>Glow Drop Accessories</h3>
+          <p>Glow Beyond Ordinary</p>
+          <p>Kaduna, Nigeria</p>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <p><a href="https://instagram.com/glow_dropaccessories" target="_blank">Instagram – @glow_dropaccessories</a></p>
+          <p><a href="https://facebook.com" target="_blank">Facebook – Glowdrop Accessories</a></p>
+          <p>Email: glowdropaccessories@gmail.com</p>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <p>Customer Support: +234 000 000 0000</p>
+          <button class="secondary" type="button" data-action="whatsapp">WhatsApp Contact</button>
+        </div>
+      </footer>
+
+      <div class="social-float">
+        <a href="https://instagram.com/glow_dropaccessories" target="_blank" aria-label="Instagram">IG</a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">FB</a>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
